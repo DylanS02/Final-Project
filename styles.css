@@ -10,7 +10,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    background-color: #0073e6;
+    background-color: #cc3333; /* Lighter maroon color */
     color: #fff;
     padding: 1rem;
     text-align: center;
@@ -57,7 +57,7 @@ header {
     right: 0;
     width: 40px;
     height: 40px;
-    background-color: #0073e6;
+    background-color: #cc3333;
     color: #fff;
     text-align: center;
     line-height: 40px;
@@ -89,6 +89,10 @@ main {
     z-index: 400;
 }
 
+#personalized-plan {
+    text-align: center; /* Centering the workout plan */
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -104,7 +108,7 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     padding: 0.5rem;
-    background-color: #800000; /* Maroon background */
+    background-color: #cc6666; /* Lighter maroon background */
     border: 1px solid #000;
     border-radius: 5px;
     text-align: center;
@@ -112,7 +116,7 @@ nav ul li a {
 
 nav ul li a:hover {
     text-decoration: underline;
-    background-color: #ff6666; /* Lighter maroon on hover */
+    background-color: #ff9999; /* Even lighter maroon on hover */
 }
 
 #personalized-plan ul {
@@ -130,8 +134,12 @@ nav ul li a:hover {
 }
 
 #personalized-plan h2 {
-    text-align: center;
-    color: #0073e6;
+    color: #cc3333; /* Lighter maroon color */
+}
+
+#personalized-plan ul li ul {
+    margin-top: 0.5rem;
+    padding-left: 1rem;
 }
 
 .community-content {
@@ -144,7 +152,7 @@ nav ul li a:hover {
 }
 
 .community-content a {
-    color: #0073e6;
+    color: #cc3333;
     text-decoration: none;
     font-weight: bold;
 }
