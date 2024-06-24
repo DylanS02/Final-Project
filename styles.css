@@ -89,10 +89,6 @@ main {
     z-index: 400;
 }
 
-#personalized-plan {
-    text-align: center; /* Centering the workout plan */
-}
-
 nav ul {
     list-style: none;
     padding: 0;
@@ -110,53 +106,3 @@ nav ul li a {
     padding: 0.5rem;
     background-color: #cc6666; /* Lighter maroon background */
     border: 1px solid #000;
-    border-radius: 5px;
-    text-align: center;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-    background-color: #ff9999; /* Even lighter maroon on hover */
-}
-
-#personalized-plan ul {
-    list-style: none;
-    padding: 0;
-}
-
-#personalized-plan ul li {
-    margin: 1rem 0;
-    padding: 1rem;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-#personalized-plan h2 {
-    color: #cc3333; /* Lighter maroon color */
-}
-
-#personalized-plan ul li ul {
-    margin-top: 0.5rem;
-    padding-left: 1rem;
-}
-
-.community-content {
-    margin-top: 60px;
-    padding: 1rem;
-}
-
-.community-content p {
-    margin: 0.5rem 0;
-}
-
-.community-content a {
-    color: #cc3333;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.community-content a:hover {
-    text-decoration: underline;
-}
