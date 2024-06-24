@@ -50,3 +50,74 @@ header {
 .toggle-checkbox:checked ~ .right-sidebar {
     transform: translateX(100%);
 }
+
+.toggle-label {
+    cursor: pointer;
+    background-color: #0073e6;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    margin-right: 1rem;
+    user-select: none;
+}
+
+main {
+    flex-grow: 1;
+    margin-left: 200px;
+    margin-right: 250px;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 1rem 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+#personalized-plan ul {
+    list-style: none;
+    padding: 0;
+}
+
+#personalized-plan ul li {
+    margin: 1rem 0;
+}
+
+.community-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.community-content {
+    margin-top: 1rem;
+}
+
+.community-content p {
+    margin: 0.5rem 0;
+}
+
+.community-content a {
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.community-content a:hover {
+    text-decoration: underline;
+}
