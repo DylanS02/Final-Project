@@ -26,10 +26,11 @@ header {
     position: fixed;
     top: 80px;
     bottom: 0;
-    background-color: #333;
-    color: #fff;
+    background-color: #fff;
+    color: #333;
     padding: 1rem;
     overflow-y: auto;
+    border: 1px solid #000;
     z-index: 500;
 }
 
@@ -79,7 +80,7 @@ header {
 
 main {
     flex-grow: 1;
-    margin-left: 220px; /* Increased margin to ensure content is not hidden */
+    margin-left: 240px; /* Increased margin to ensure content is not hidden */
     margin-right: 20px; /* Additional margin to ensure content is visible */
     padding: 1rem;
     padding-top: 60px;
@@ -99,18 +100,19 @@ nav ul li {
 
 nav ul li a {
     display: block;
-    color: #fff;
+    color: #000;
     text-decoration: none;
     font-weight: bold;
     padding: 0.5rem;
-    border: 1px solid #0073e6;
+    background-color: #800000; /* Maroon background */
+    border: 1px solid #000;
     border-radius: 5px;
     text-align: center;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
-    background-color: #0073e6;
+    background-color: #ff6666; /* Lighter maroon on hover */
 }
 
 #personalized-plan ul {
@@ -120,6 +122,16 @@ nav ul li a:hover {
 
 #personalized-plan ul li {
     margin: 1rem 0;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#personalized-plan h2 {
+    text-align: center;
+    color: #0073e6;
 }
 
 .community-content {
