@@ -10,8 +10,8 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    background-color: #800000; /* Lighter maroon color */
-    color: #fff;
+    background-color: #800000; /* Maroon color */
+    color: #fff; /* White text color */
     padding: 1rem;
     text-align: center;
     z-index: 1000;
@@ -26,11 +26,11 @@ header {
     position: fixed;
     top: 80px;
     bottom: 0;
-    background-color: #fff;
+    background-color: #f0f0f0; /* Very light grey */
     color: #333;
     padding: 1rem;
     overflow-y: auto;
-    border: 1px solid #000;
+    border: 1px solid #ccc; /* Light grey border */
     z-index: 500;
 }
 
@@ -42,8 +42,8 @@ header {
 
 .right-sidebar {
     right: 0;
-    width: 250px;
-    transition: transform 0.3s ease-in-out;
+    width: 40px; /* Very thin sidebar when minimized */
+    transition: width 0.3s ease-in-out;
     overflow: hidden;
 }
 
@@ -57,8 +57,8 @@ header {
     right: 0;
     width: 40px;
     height: 40px;
-    background-color: #800000;
-    color: #fff;
+    background-color: #800000; /* Maroon color */
+    color: #fff; /* White text color */
     text-align: center;
     line-height: 40px;
     cursor: pointer;
@@ -67,7 +67,7 @@ header {
 }
 
 .toggle-checkbox:checked ~ .right-sidebar {
-    transform: translateX(100%);
+    width: 250px; /* Expanded width when toggled */
 }
 
 .toggle-checkbox:checked ~ .toggle-label::after {
@@ -80,7 +80,7 @@ header {
 
 main {
     flex-grow: 1;
-    margin-left: 240px; /* Increased margin to ensure content is not hidden */
+    margin-left: 220px; /* Adjusted margin to accommodate thinner sidebar */
     margin-right: 20px; /* Additional margin to ensure content is visible */
     padding: 1rem;
     padding-top: 60px;
@@ -100,19 +100,19 @@ nav ul li {
 
 nav ul li a {
     display: block;
-    color: #000;
+    color: #fff; /* White text color */
     text-decoration: none;
     font-weight: bold;
     padding: 0.5rem;
-    background-color: #cc6666; /* Lighter maroon background */
-    border: 1px solid #000;
+    background-color: #800000; /* Maroon color */
+    border: 1px solid #ccc; /* Light grey border */
     border-radius: 5px;
     text-align: center;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
-    background-color: #ff9999; /* Even lighter maroon on hover */
+    background-color: #cc0000; /* Darker maroon on hover */
 }
 
 #personalized-plan ul {
@@ -130,7 +130,8 @@ nav ul li a:hover {
 }
 
 #personalized-plan h2 {
-    color: #800000; /* Lighter maroon color */
+    color: #000; /* Black color */
+    text-align: center;
 }
 
 #personalized-plan ul li ul {
@@ -148,7 +149,7 @@ nav ul li a:hover {
 }
 
 .community-content a {
-    color: #800000;
+    color: #800000; /* Maroon color */
     text-decoration: none;
     font-weight: bold;
 }
