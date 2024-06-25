@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartFit</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js for graphing -->
 </head>
 <body>
     <header>
@@ -21,7 +22,7 @@
                 </ul>
             </nav>
         </aside>
-        <main>
+        <main id="main-content">
             <section id="personalized-plan">
                 <h2>Personalized Workout Plan</h2>
                 <ul>
@@ -52,15 +53,109 @@
                     </li>
                 </ul>
             </section>
+            <section id="progress-monitoring" style="display:none;">
+                <h2>Progress Monitoring</h2>
+                <div class="progress-changes">
+                    <h3>Calories Gained/Lost</h3>
+                    <canvas id="caloriesChart"></canvas>
+                </div>
+                <div class="progress-changes">
+                    <h3>Heart Rate Monitoring</h3>
+                    <canvas id="heartRateChart"></canvas>
+                </div>
+                <div class="workout-changes">
+                    <h3>Changes to Workout Plan</h3>
+                    <p>Your workout plan has been adjusted based on your recent activity.</p>
+                    <ul>
+                        <li>Added 10 minutes of stretching to cool down.</li>
+                        <li>Increased cycling duration by 5 minutes.</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="nutrition">
+                <h2>Nutrition</h2>
+                <!-- Content for nutrition -->
+            </section>
+            <section id="settings">
+                <h2>Settings</h2>
+                <!-- Content for settings -->
+            </section>
         </main>
         <aside class="sidebar right-sidebar" id="community-sidebar">
-            <input type="checkbox" id="toggle-community" class="toggle-checkbox">
-            <label for="toggle-community" class="toggle-label"></label>
             <div class="community-content">
                 <p>No community posts</p>
                 <p><a href="#">Join the Community! +</a></p>
             </div>
         </aside>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const navLinks = document.querySelectorAll('nav ul li a');
+            const sections = document.querySelectorAll('main section');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    sections.forEach(section => {
+                        if (section.id === targetId) {
+                            section.style.display = 'block';
+                        } else {
+                            section.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Initialize charts
+            const caloriesCtx = document.getElementById('caloriesChart').getContext('2d');
+            const heartRateCtx = document.getElementById('heartRateChart').getContext('2d');
+
+            new Chart(caloriesCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+                    datasets: [{
+                        label: 'Calories',
+                        data: [2000, 2200, 1800, 2400, 2500, 1900, 2300],
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            new Chart(heartRateCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+                    datasets: [{
+                        label: 'Heart Rate',
+                        data: [70, 72, 68, 75, 78, 73, 71],
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
