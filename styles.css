@@ -114,9 +114,8 @@ nav ul li a:hover {
     padding-left: 1rem;
 }
 
-#nutrition ul {
-    list-style: none;
-    padding: 0;
+#nutrition {
+    padding: 1rem;
 }
 
 #nutrition h2 {
@@ -125,7 +124,7 @@ nav ul li a:hover {
     padding-left: 1rem; 
 }
 
-.nutrition-content {
+.meal-section {
     margin-top: 1rem;
     padding: 1rem;
     background-color: #fff;
@@ -134,13 +133,14 @@ nav ul li a:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
-.nutrition-content h3 {
+.meal-section h3 {
     color: #333;
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
 }
 
 .diet-plan-list {
+    list-style: none;
     padding: 0;
 }
 
