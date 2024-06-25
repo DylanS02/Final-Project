@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings & Account Creation</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <header>
+        <h1>Settings & Account Creation</h1>
+    </header>
+    <div class="container">
+        <h2>Create Your Account</h2>
+        <form action="/submit-account" method="POST">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" required>
 
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="birthdate">Date of Birth</label>
+            <input type="date" id="birthdate" name="birthdate">
+
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <button type="submit">Create Account</button>
+        </form>
+
+        <h2>Sync Health App</h2>
+        <p>To sync your health app data, please follow the instructions provided by your device or app.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Your Fitness App. All rights reserved.</p>
+    </footer>
+</body>
+</html>
