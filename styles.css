@@ -44,49 +44,16 @@ header {
 
 .right-sidebar {
     right: 0;
-    width: 40px;
-    transition: width 0.3s ease-in-out;
-    overflow: hidden;
+    width: 220px;
+    padding-top: 60px;
     border-left: 1px solid #e0e0e0; /* Light grey border */
     box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-.toggle-checkbox {
-    display: none;
-}
-
-.toggle-label {
-    position: absolute;
-    top: 10px;
-    right: 0;
-    width: 40px;
-    height: 40px;
-    background-color: #ff5f6d; /* Matching the header gradient */
-    color: #fff;
-    text-align: center;
-    line-height: 40px;
-    cursor: pointer;
-    border-radius: 0 5px 5px 0;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-.toggle-checkbox:checked ~ .right-sidebar {
-    width: 250px; /* Expanded width when toggled */
-}
-
-.toggle-checkbox:checked ~ .toggle-label::after {
-    content: '<';
-}
-
-.toggle-label::after {
-    content: '>';
 }
 
 main {
     flex-grow: 1;
     margin-left: 240px; /* Adjusted margin to accommodate wider sidebar */
-    margin-right: 20px;
+    margin-right: 240px; /* Adjusted margin to accommodate wider sidebar */
     padding: 1rem;
     padding-top: 60px;
     background-color: #fff;
@@ -131,14 +98,15 @@ nav ul li a:hover {
     margin: 1rem 0;
     padding: 1rem;
     background-color: #fff;
-    border: 1px solid #e0e0e0; 
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    border: 1px solid #e0e0e0; /* Light grey border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 #personalized-plan h2 {
     color: #333;
-    text-align: center;
+    text-align: left; /* Aligned with the rest of the text */
+    padding-left: 1rem; /* Ensure padding matches other list items */
 }
 
 #personalized-plan ul li ul {
@@ -156,7 +124,7 @@ nav ul li a:hover {
 }
 
 .community-content a {
-    color: #ff5f6d;
+    color: #ff5f6d; /* Gradient color */
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
@@ -164,5 +132,5 @@ nav ul li a:hover {
 
 .community-content a:hover {
     text-decoration: underline;
-    color: #ff8a73; 
+    color: #ff8a73; /* Lighter shade on hover */
 }
