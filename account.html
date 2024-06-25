@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartFit - Create Account</title>
+    <title>SmartFit - Account Settings</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -18,12 +18,12 @@
             top: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(90deg, #ff5f6d, #ffc371); 
+            background: linear-gradient(90deg, #ff5f6d, #ffc371);
             color: #fff;
             padding: 1rem;
             text-align: center;
             z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .back-link {
@@ -33,14 +33,22 @@
             color: #fff;
             text-decoration: none;
             font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .back-link svg {
+            height: 1.2em;
+            width: auto;
+            margin-right: 5px;
         }
 
         main {
             margin-top: 80px;
             padding: 1rem;
             background-color: #fff;
-            border-radius: 10px; 
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         section {
@@ -49,8 +57,8 @@
 
         h2 {
             color: #333;
-            text-align: left; 
-            padding-left: 1rem; 
+            text-align: left;
+            padding-left: 1rem;
         }
 
         form {
@@ -104,7 +112,13 @@
 <body>
     <header>
         <h1>SmartFit - Account Settings</h1>
-        <a href="index.html" class="back-link">Back to Dashboard</a>
+        <a href="index.html" class="back-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Back to Dashboard
+        </a>
     </header>
     <main class="account-page">
         <section>
