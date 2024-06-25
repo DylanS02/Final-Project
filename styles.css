@@ -1,7 +1,7 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f9f9f9;
     color: #333;
 }
 
@@ -10,11 +10,12 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    background-color: #800000; /* Maroon color */
+    background: linear-gradient(90deg, #ff5f6d, #ffc371); /* Gradient background */
     color: #fff;
     padding: 1rem;
     text-align: center;
     z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .container {
@@ -26,25 +27,28 @@ header {
     position: fixed;
     top: 80px;
     bottom: 0;
-    background-color: #f0f0f0; /* Very light grey */
+    background-color: #fff;
     color: #333;
     padding: 1rem;
     overflow-y: auto;
-    border: 1px solid #ccc; /* Light grey border */
+    border-right: 1px solid #e0e0e0; /* Light grey border */
     z-index: 500;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .left-sidebar {
     left: 0;
-    width: 200px;
+    width: 220px;
     padding-top: 60px;
 }
 
 .right-sidebar {
     right: 0;
-    width: 40px; /* Very thin sidebar when minimized */
+    width: 40px;
     transition: width 0.3s ease-in-out;
     overflow: hidden;
+    border-left: 1px solid #e0e0e0; /* Light grey border */
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .toggle-checkbox {
@@ -57,13 +61,14 @@ header {
     right: 0;
     width: 40px;
     height: 40px;
-    background-color: #800000; /* Maroon color */
+    background-color: #ff5f6d; /* Matching the header gradient */
     color: #fff;
     text-align: center;
     line-height: 40px;
     cursor: pointer;
     border-radius: 0 5px 5px 0;
     z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .toggle-checkbox:checked ~ .right-sidebar {
@@ -80,12 +85,13 @@ header {
 
 main {
     flex-grow: 1;
-    margin-left: 220px; /* Adjusted margin to accommodate thinner sidebar */
-    margin-right: 20px; /* Additional margin to ensure content is visible */
+    margin-left: 240px; /* Adjusted margin to accommodate wider sidebar */
+    margin-right: 20px;
     padding: 1rem;
     padding-top: 60px;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     z-index: 400;
 }
 
@@ -100,19 +106,20 @@ nav ul li {
 
 nav ul li a {
     display: block;
-    color: #800000; /* Maroon color */
+    color: #ff5f6d; /* Gradient color */
     text-decoration: none;
     font-weight: bold;
-    padding: 0.5rem;
-    background-color: #fff; /* White background */
-    border: 1px solid #ccc; /* Light grey border */
-    border-radius: 5px;
+    padding: 0.75rem;
+    background-color: #fff;
+    border: 1px solid #e0e0e0; /* Light grey border */
+    border-radius: 10px; /* Rounded corners */
     text-align: center;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
-    background-color: #f2f2f2; /* Light grey background on hover */
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
 }
 
 #personalized-plan ul {
@@ -123,14 +130,14 @@ nav ul li a:hover {
 #personalized-plan ul li {
     margin: 1rem 0;
     padding: 1rem;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border: 1px solid #e0e0e0; 
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 #personalized-plan h2 {
-    color: #000; /* Black color */
+    color: #333;
     text-align: center;
 }
 
@@ -149,11 +156,13 @@ nav ul li a:hover {
 }
 
 .community-content a {
-    color: #800000; /* Maroon color */
+    color: #ff5f6d;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
 .community-content a:hover {
     text-decoration: underline;
+    color: #ff8a73; 
 }
