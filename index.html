@@ -72,7 +72,19 @@
                     </ul>
                 </div>
             </section>
-            </section>
+            <section id="nutrition" style="display:none;">
+                <h2>Nutrition</h2>
+                <div id="nutrition-content">
+                    <h3>Diet Plan</h3>
+                    <p>Your personalized diet plan based on your fitness data:</p>
+                    <ul id="diet-plan-list">
+                        <li>Breakfast: Protein shake with oatmeal</li>
+                        <li>Morning Snack: Greek yogurt with honey and nuts</li>
+                        <li>Lunch: Grilled chicken breast with quinoa and steamed vegetables</li>
+                        <li>Afternoon Snack: Apple with almond butter</li>
+                        <li>Dinner: Baked salmon with sweet potato and mixed greens salad</li>
+                    </ul>
+                </div>
             </section>
         </main>
         <aside class="sidebar right-sidebar" id="community-sidebar">
@@ -148,6 +160,25 @@
                     }
                 }
             });
+
+            const dietPlan = [
+                'Breakfast: Protein shake with oatmeal',
+                'Morning Snack: Greek yogurt with honey and nuts',
+                'Lunch: Grilled chicken breast with quinoa and steamed vegetables',
+                'Afternoon Snack: Apple with almond butter',
+                'Dinner: Baked salmon with sweet potato and mixed greens salad'
+            ];
+
+            function populateDietPlan() {
+                const dietPlanList = document.getElementById('diet-plan-list');
+                dietPlan.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    dietPlanList.appendChild(li);
+                });
+            }
+
+            populateDietPlan();
         });
     </script>
 </body>
