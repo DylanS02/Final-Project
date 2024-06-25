@@ -3,114 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Your Account</title>
+    <title>SmartFit - Account</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-            padding: 1rem;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 2rem;
-            margin-top: 80px;
-        }
-
-        h2 {
-            color: #333;
-            text-align: left;
-            padding-left: 1rem;
-            margin-bottom: 1.5rem;
-            border-bottom: 2px solid #ccc;
-        }
-
-        form {
-            margin-bottom: 2rem;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="password"],
-        select {
-            width: 100%;
-            padding: 0.75rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-
-        button {
-            background-color: #ff5f6d;
-            color: #fff;
-            border: none;
-            padding: 0.75rem 1rem;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        button:hover {
-            background-color: #ff8a73;
-        }
-    </style>
 </head>
 <body>
     <header>
-        <h1>Create Your Account</h1>
+        <h1>SmartFit - Account Settings</h1>
+        <a href="index.html" class="back-link">Back to Dashboard</a>
     </header>
-    <div class="container">
-        <h2>Account Information</h2>
-        <form action="/submit-account" method="POST">
-            <label for="fullname">Full Name</label>
-            <input type="text" id="fullname" name="fullname" required>
+    <main class="account-page">
+        <section>
+            <h2>Account Information</h2>
+            <form action="#" method="POST">
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username" required><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" required><br><br>
+                <input type="submit" value="Save Changes">
+            </form>
+        </section>
+        <section>
+            <h2>Sync Health App</h2>
+            <p>Sync your health app to track your progress automatically.</p>
+            <button id="sync-button">Sync Health App</button>
+        </section>
+    </main>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
-
-            <label for="birthdate">Date of Birth</label>
-            <input type="date" id="birthdate" name="birthdate">
-
-            <label for="gender">Gender</label>
-            <select id="gender" name="gender">
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-            </select>
-
-            <h2>Health App Integration</h2>
-            <p>Link your health app to sync data.</p>
-            <label for="health-app">Health App</label>
-            <select id="health-app" name="health-app">
-                <option value="none">Select App</option>
-                <option value="fitbit">Fitbit</option>
-                <option value="apple-health">Apple Health</option>
-                <option value="google-fit">Google Fit</option>
-                <option value="other">Other</option>
-            </select>
-
-            <button type="submit">Create Account</button>
-        </form>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 Your Fitness App. All rights reserved.</p>
-    </footer>
+    <script>
+        document.getElementById('sync-button').addEventListener('click', function() {
+            alert('Syncing health app...');
+        });
+    </script>
 </body>
 </html>
