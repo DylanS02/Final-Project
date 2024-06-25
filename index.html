@@ -55,36 +55,47 @@
             </section>
             <section id="progress-monitoring" style="display:none;">
                 <h2>Progress Monitoring</h2>
-                <div class="progress-wrapper">
-                    <div class="progress-changes">
-                        <h3>Calories Gained/Lost</h3>
-                        <canvas id="caloriesChart" width="400" height="200"></canvas>
-                    </div>
-                    <div class="progress-changes">
-                        <h3>Heart Rate Monitoring</h3>
-                        <canvas id="heartRateChart" width="400" height="200"></canvas>
-                    </div>
-                    <div class="workout-changes">
-                        <h3>Changes to Workout Plan</h3>
-                        <p>Your workout plan has been adjusted based on your recent activity.</p>
-                        <ul>
-                            <li>Added 10 minutes of stretching to cool down.</li>
-                            <li>Increased cycling duration by 5 minutes.</li>
-                        </ul>
-                    </div>
+                <div class="progress-changes">
+                    <h3>Calories Gained/Lost</h3>
+                    <canvas id="caloriesChart" width="400" height="200"></canvas>
+                </div>
+                <div class="progress-changes">
+                    <h3>Heart Rate Monitoring</h3>
+                    <canvas id="heartRateChart" width="400" height="200"></canvas>
+                </div>
+                <div class="workout-changes">
+                    <h3>Changes to Workout Plan</h3>
+                    <p>Your workout plan has been adjusted based on your recent activity.</p>
+                    <ul>
+                        <li>Added 10 minutes of stretching to cool down.</li>
+                        <li>Increased cycling duration by 5 minutes.</li>
+                    </ul>
                 </div>
             </section>
             <section id="nutrition" style="display:none;">
-                <h2>Nutrition</h2>
-                <div class="nutrition-content">
-                    <h3>Diet Plan</h3>
-                    <p>Your personalized diet plan based on your fitness data:</p>
-                    <ul class="diet-plan-list">
-                        <li>Breakfast: Protein shake with oatmeal</li>
-                        <li>Morning Snack: Greek yogurt with honey and nuts</li>
-                        <li>Lunch: Grilled chicken breast with quinoa and steamed vegetables</li>
-                        <li>Afternoon Snack: Apple with almond butter</li>
-                        <li>Dinner: Baked salmon with sweet potato and mixed greens salad</li>
+                <h2>Nutrition Plan</h2>
+                <div class="meal-section" id="breakfast">
+                    <h3>Breakfast</h3>
+                    <ul>
+                        <li>Scrambled eggs with whole wheat toast (350 calories)</li>
+                        <li>Greek yogurt with berries and granola (300 calories)</li>
+                        <li>Oatmeal with almond butter and banana (400 calories)</li>
+                    </ul>
+                </div>
+                <div class="meal-section" id="lunch">
+                    <h3>Lunch</h3>
+                    <ul>
+                        <li>Grilled chicken salad with mixed greens (450 calories)</li>
+                        <li>Quinoa with roasted vegetables (350 calories)</li>
+                        <li>Turkey sandwich on whole grain bread with avocado (400 calories)</li>
+                    </ul>
+                </div>
+                <div class="meal-section" id="dinner">
+                    <h3>Dinner</h3>
+                    <ul>
+                        <li>Salmon with steamed broccoli and brown rice (500 calories)</li>
+                        <li>Vegan chili with sweet potato (450 calories)</li>
+                        <li>Lean beef stir-fry with vegetables (400 calories)</li>
                     </ul>
                 </div>
             </section>
@@ -162,25 +173,6 @@
                     }
                 }
             });
-
-            const dietPlan = [
-                'Breakfast: Protein shake with oatmeal',
-                'Morning Snack: Greek yogurt with honey and nuts',
-                'Lunch: Grilled chicken breast with quinoa and steamed vegetables',
-                'Afternoon Snack: Apple with almond butter',
-                'Dinner: Baked salmon with sweet potato and mixed greens salad'
-            ];
-
-            function populateDietPlan() {
-                const dietPlanList = document.querySelector('.diet-plan-list');
-                dietPlan.forEach(item => {
-                    const li = document.createElement('li');
-                    li.textContent = item;
-                    dietPlanList.appendChild(li);
-                });
-            }
-
-            populateDietPlan();
         });
     </script>
 </body>
