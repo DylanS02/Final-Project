@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Settings & Account Creation</title>
+    <title>Create Your Account</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -70,10 +70,10 @@
 </head>
 <body>
     <header>
-        <h1>Settings & Account Creation</h1>
+        <h1>Create Your Account</h1>
     </header>
     <div class="container">
-        <h2>Create Your Account</h2>
+        <h2>Account Information</h2>
         <form action="/submit-account" method="POST">
             <label for="fullname">Full Name</label>
             <input type="text" id="fullname" name="fullname" required>
@@ -94,11 +94,19 @@
                 <option value="other">Other</option>
             </select>
 
+            <h2>Health App Integration</h2>
+            <p>Link your health app to sync data.</p>
+            <label for="health-app">Health App</label>
+            <select id="health-app" name="health-app">
+                <option value="none">Select App</option>
+                <option value="fitbit">Fitbit</option>
+                <option value="apple-health">Apple Health</option>
+                <option value="google-fit">Google Fit</option>
+                <option value="other">Other</option>
+            </select>
+
             <button type="submit">Create Account</button>
         </form>
-
-        <h2>Sync Health App</h2>
-        <p>To sync your health app data, please follow the instructions provided by your device or app.</p>
     </div>
 
     <footer>
