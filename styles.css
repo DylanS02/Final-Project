@@ -23,22 +23,6 @@ header {
     margin-top: 80px;
 }
 
-.account-link {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    display: block;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    background-color: #333;
-    color: #fff;
-    border-radius: 50%;
-    text-decoration: none;
-    z-index: 1100; /* Ensure it's above other elements */
-}
-
 .sidebar {
     position: fixed;
     top: 80px;
@@ -105,4 +89,128 @@ nav ul li a:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Additional styling for sections, as needed */
+#personalized-plan ul {
+    list-style: none;
+    padding: 0;
+}
+
+#personalized-plan ul li {
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #e0e0e0; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+#personalized-plan h2 {
+    color: #333;
+    text-align: left; 
+    padding-left: 1rem; 
+}
+
+#personalized-plan ul li ul {
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+}
+
+#nutrition {
+    padding: 1rem;
+}
+
+#nutrition h2 {
+    color: #333;
+    text-align: left; 
+    padding-left: 1rem; 
+}
+
+.meal-section {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #e0e0e0; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.meal-section h3 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.diet-plan-list {
+    list-style: none;
+    padding: 0;
+}
+
+.diet-plan-list li {
+    margin: 0.5rem 0;
+}
+
+.community-content {
+    margin-top: 60px;
+    padding: 1rem;
+}
+
+.community-content p {
+    margin: 0.5rem 0;
+}
+
+.community-content a {
+    color: #ff5f6d;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.community-content a:hover {
+    text-decoration: underline;
+    color: #ff8a73;
+}
+
+/* Progress Monitoring Section */
+
+#progress-monitoring {
+    display: none;
+    padding: 1rem;
+}
+
+.progress-wrapper {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+.progress-changes {
+    margin-bottom: 1rem;
+}
+
+.progress-changes h3 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.workout-changes {
+    margin-top: 1rem;
+}
+
+.workout-changes h3 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.workout-changes p {
+    margin-bottom: 0.5rem;
+}
+
+.workout-changes ul {
+    padding-left: 1rem;
+}
+
+.workout-changes ul li {
+    margin-bottom: 0.5rem;
+}
