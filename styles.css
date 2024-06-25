@@ -187,8 +187,6 @@ nav ul li a:hover {
     color: #ff8a73;
 }
 
-/* Progress Monitoring Section */
-
 #progress-monitoring {
     display: none;
     padding: 1rem;
@@ -231,4 +229,34 @@ nav ul li a:hover {
 
 .workout-changes ul li {
     margin-bottom: 0.5rem;
+}
+
+#settings {
+    display: none;
+    padding: 1rem;
+}
+
+.setting-option {
+    margin-bottom: 1rem;
+}
+
+.setting-option h3 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+#theme-select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+}
+
+#enable-notifications {
+    margin-right: 0.5rem;
+}
+
+[name="units"] {
+    margin-right: 0.5rem;
 }
