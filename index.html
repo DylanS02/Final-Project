@@ -55,29 +55,31 @@
             </section>
             <section id="progress-monitoring" style="display:none;">
                 <h2>Progress Monitoring</h2>
-                <div class="progress-changes">
-                    <h3>Calories Gained/Lost</h3>
-                    <canvas id="caloriesChart" width="400" height="200"></canvas>
-                </div>
-                <div class="progress-changes">
-                    <h3>Heart Rate Monitoring</h3>
-                    <canvas id="heartRateChart" width="400" height="200"></canvas>
-                </div>
-                <div class="workout-changes">
-                    <h3>Changes to Workout Plan</h3>
-                    <p>Your workout plan has been adjusted based on your recent activity.</p>
-                    <ul>
-                        <li>Added 10 minutes of stretching to cool down.</li>
-                        <li>Increased cycling duration by 5 minutes.</li>
-                    </ul>
+                <div class="progress-wrapper">
+                    <div class="progress-changes">
+                        <h3>Calories Gained/Lost</h3>
+                        <canvas id="caloriesChart" width="400" height="200"></canvas>
+                    </div>
+                    <div class="progress-changes">
+                        <h3>Heart Rate Monitoring</h3>
+                        <canvas id="heartRateChart" width="400" height="200"></canvas>
+                    </div>
+                    <div class="workout-changes">
+                        <h3>Changes to Workout Plan</h3>
+                        <p>Your workout plan has been adjusted based on your recent activity.</p>
+                        <ul>
+                            <li>Added 10 minutes of stretching to cool down.</li>
+                            <li>Increased cycling duration by 5 minutes.</li>
+                        </ul>
+                    </div>
                 </div>
             </section>
             <section id="nutrition" style="display:none;">
                 <h2>Nutrition</h2>
-                <div id="nutrition-content">
+                <div class="nutrition-content">
                     <h3>Diet Plan</h3>
                     <p>Your personalized diet plan based on your fitness data:</p>
-                    <ul id="diet-plan-list">
+                    <ul class="diet-plan-list">
                         <li>Breakfast: Protein shake with oatmeal</li>
                         <li>Morning Snack: Greek yogurt with honey and nuts</li>
                         <li>Lunch: Grilled chicken breast with quinoa and steamed vegetables</li>
@@ -170,7 +172,7 @@
             ];
 
             function populateDietPlan() {
-                const dietPlanList = document.getElementById('diet-plan-list');
+                const dietPlanList = document.querySelector('.diet-plan-list');
                 dietPlan.forEach(item => {
                     const li = document.createElement('li');
                     li.textContent = item;
