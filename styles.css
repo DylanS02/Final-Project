@@ -10,12 +10,12 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(90deg, #ff5f6d, #ffc371); 
+    background: linear-gradient(90deg, #ff5f6d, #ffc371); /* Gradient background */
     color: #fff;
     padding: 1rem;
     text-align: center;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .container {
@@ -31,9 +31,9 @@ header {
     color: #333;
     padding: 1rem;
     overflow-y: auto;
-    border-right: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0; /* Light grey border */
     z-index: 500;
-    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1); 
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .left-sidebar {
@@ -46,21 +46,20 @@ header {
     right: 0;
     width: 220px;
     padding-top: 60px;
-    border-left: 1px solid #e0e0e0; 
-    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1); 
+    border-left: 1px solid #e0e0e0; /* Light grey border */
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 main {
     flex-grow: 1;
-    margin-left: 240px; 
-    margin-right: 240px; 
+    margin-left: 240px; /* Adjusted margin to accommodate wider sidebar */
+    margin-right: 240px; /* Adjusted margin to accommodate wider sidebar */
     padding: 1rem;
     padding-top: 60px;
     background-color: #fff;
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     z-index: 400;
-    overflow-y: auto; 
 }
 
 nav ul {
@@ -74,20 +73,20 @@ nav ul li {
 
 nav ul li a {
     display: block;
-    color: #ff5f6d; 
+    color: #ff5f6d; /* Gradient color */
     text-decoration: none;
     font-weight: bold;
     padding: 0.75rem;
     background-color: #fff;
-    border: 1px solid #e0e0e0; 
-    border-radius: 10px; 
+    border: 1px solid #e0e0e0; /* Light grey border */
+    border-radius: 10px; /* Rounded corners */
     text-align: center;
     transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 nav ul li a:hover {
     background-color: #f8f8f8;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
 }
 
 #personalized-plan ul {
@@ -97,4 +96,41 @@ nav ul li a:hover {
 
 #personalized-plan ul li {
     margin: 1rem 0;
-    padding: 1
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #e0e0e0; /* Light grey border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#personalized-plan h2 {
+    color: #333;
+    text-align: left; /* Aligned with the rest of the text */
+    padding-left: 1rem; /* Ensure padding matches other list items */
+}
+
+#personalized-plan ul li ul {
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+}
+
+.community-content {
+    margin-top: 60px;
+    padding: 1rem;
+}
+
+.community-content p {
+    margin: 0.5rem 0;
+}
+
+.community-content a {
+    color: #ff5f6d; /* Gradient color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.community-content a:hover {
+    text-decoration: underline;
+    color: #ff8a73; /* Lighter shade on hover */
+}
