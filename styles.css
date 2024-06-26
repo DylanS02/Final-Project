@@ -142,6 +142,51 @@ nav ul li a:hover {
     padding-left: 1rem; 
 }
 
+.meal-input {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #e0e0e0; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.meal-input h3 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+#food-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#food-form label {
+    margin-bottom: 0.5rem;
+}
+
+#food-form input[type="text"] {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+#food-form button {
+    padding: 0.75rem;
+    background-color: #ff5f6d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#food-form button:hover {
+    background-color: #ff8a73;
+}
+
 .meal-section {
     margin-top: 1rem;
     padding: 1rem;
