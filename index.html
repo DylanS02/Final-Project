@@ -67,11 +67,11 @@
                 <h2>Progress Monitoring</h2>
                 <div class="progress-changes">
                     <h3>Calories Gained Over the Past Week</h3>
-                    <canvas id="caloriesChart"></canvas>
+                    <canvas id="caloriesChart" width="100" height="50"></canvas>
                 </div>
                 <div class="progress-changes">
                     <h3>Heart Rate Monitoring</h3>
-                    <canvas id="heartRateChart"></canvas>
+                    <canvas id="heartRateChart" width="400" height="200"></canvas>
                 </div>
                 <div class="workout-changes">
                     <h3>Changes to Workout Plan</h3>
@@ -176,32 +176,40 @@
                     datasets: [{
                         label: 'Calories',
                         data: [2000, 2200, 1800, 2400, 2500, 1900, 2300],
-                        borderColor: 'rgba(75, 192, 192, 1)',
-                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                        fill: true,
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        fill: true
                     }]
                 },
                 options: {
                     responsive: true,
-                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
                 }
             });
 
             new Chart(heartRateCtx, {
                 type: 'line',
                 data: {
-                    labels: ['0', '10', '20', '30', '40', '50', '60'],
+                    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
                     datasets: [{
-                        label: 'Heart Rate (bpm)',
-                        data: [72, 75, 78, 80, 79, 77, 76],
-                        borderColor: 'rgba(255, 99, 132, 1)',
-                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                        fill: true,
+                        label: 'Heart Rate',
+                        data: [70, 72, 68, 75, 78, 73, 71],
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        fill: true
                     }]
                 },
                 options: {
                     responsive: true,
-                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
                 }
             });
         });
