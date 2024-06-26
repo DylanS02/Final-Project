@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartFit</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header>
@@ -19,7 +19,7 @@
                     <li><a href="#personalized-plan">Personalized Plan</a></li>
                     <li><a href="#progress-monitoring">Progress Monitoring</a></li>
                     <li><a href="#nutrition">Nutrition</a></li>
-                    <li><a href="#settings">Settings</a></li> 
+                    <li><a href="#settings">Settings</a></li>
                 </ul>
             </nav>
         </aside>
@@ -67,11 +67,11 @@
                 <h2>Progress Monitoring</h2>
                 <div class="progress-changes">
                     <h3>Calories Gained Over the Past Week</h3>
-                    <canvas id="caloriesChart" width="100" height="50"></canvas>
+                    <canvas id="caloriesChart"></canvas>
                 </div>
                 <div class="progress-changes">
                     <h3>Heart Rate Monitoring</h3>
-                    <canvas id="heartRateChart" width="400" height="200"></canvas>
+                    <canvas id="heartRateChart"></canvas>
                 </div>
                 <div class="workout-changes">
                     <h3>Changes to Workout Plan</h3>
@@ -84,6 +84,18 @@
             </section>
             <section id="nutrition" style="display:none;">
                 <h2>Nutrition Plan</h2>
+                <div id="food-input">
+                    <h3>Log Your Meals</h3>
+                    <form id="food-log-form">
+                        <label for="breakfast-foods">Breakfast:</label>
+                        <input type="text" id="breakfast-foods" name="breakfast-foods"><br><br>
+                        <label for="lunch-foods">Lunch:</label>
+                        <input type="text" id="lunch-foods" name="lunch-foods"><br><br>
+                        <label for="dinner-foods">Dinner:</label>
+                        <input type="text" id="dinner-foods" name="dinner-foods"><br><br>
+                        <button type="button" id="submit-food-log">Submit</button>
+                    </form>
+                </div>
                 <div class="meal-section" id="breakfast">
                     <h3>Breakfast</h3>
                     <ul>
@@ -138,7 +150,6 @@
                 </div>
             </section>
         </main>
-
         <aside class="sidebar right-sidebar" id="community-sidebar">
             <div class="community-content">
                 <p>No community posts</p>
@@ -146,7 +157,6 @@
             </div>
         </aside>
     </div>
-
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const navLinks = document.querySelectorAll('nav ul li a');
@@ -174,43 +184,43 @@
                 data: {
                     labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
                     datasets: [{
-                        label: 'Calories',
-                        data: [2000, 2200, 1800, 2400, 2500, 1900, 2300],
-                        borderColor: 'rgba(255, 99, 132, 1)',
-                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                        fill: true
+                        label: 'Calories (kcal)',
+                        data: [2000, 2100, 1800, 2200, 2300, 2500, 2400],
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        fill: true,
                     }]
                 },
                 options: {
                     responsive: true,
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
+                    maintainAspectRatio: false,
                 }
             });
 
             new Chart(heartRateCtx, {
                 type: 'line',
                 data: {
-                    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+                    labels: ['0', '10', '20', '30', '40', '50', '60'],
                     datasets: [{
-                        label: 'Heart Rate',
-                        data: [70, 72, 68, 75, 78, 73, 71],
-                        borderColor: 'rgba(54, 162, 235, 1)',
-                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                        fill: true
+                        label: 'Heart Rate (bpm)',
+                        data: [72, 75, 78, 80, 79, 77, 76],
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        fill: true,
                     }]
                 },
                 options: {
                     responsive: true,
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
+                    maintainAspectRatio: false,
                 }
+            });
+
+            document.getElementById('submit-food-log').addEventListener('click', function() {
+                const breakfastFoods = document.getElementById('breakfast-foods').value;
+                const lunchFoods = document.getElementById('lunch-foods').value;
+                const dinnerFoods = document.getElementById('dinner-foods').value;
+
+                alert(`Logged Meals:\nBreakfast: ${breakfastFoods}\nLunch: ${lunchFoods}\nDinner: ${dinnerFoods}`);
             });
         });
     </script>
